@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/arunmurugan78/gtry/cmd"
+	"github.com/arunmurugan78/rtry/cmd"
 )
 
 func main() {
 
 	flag.Usage = func() {
-		fmt.Println("Usage:\n\tgtry [OPTIONS] COMMAND\nExample:\n\tgtry \"echo Hello there!\"\nOptions:")
+		fmt.Println("Usage:\n\trtry [OPTIONS] COMMAND\nExample:\n\trtry \"echo Hello there!\"\nOptions:")
 		flag.PrintDefaults()
 	}
 
