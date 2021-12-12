@@ -31,4 +31,5 @@ func main() {
 		Timeout:       *timeout,
 		CommandString: commandLineArgs[0],
 	})
+
 }
