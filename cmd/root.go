@@ -21,6 +21,7 @@ func ExecuteCommand(commandString string) int {
 
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = os.Stdin
+	cmd.Stderr = os.Stderr
 	cmd.Run()
 
 	return cmd.ProcessState.ExitCode()
@@ -35,6 +36,6 @@ func Run(config Config) {
 			break
 		}
 
-		time.Sleep(time.Duration(config.Timeout))
+		time.Sleep(time.Millisecond * time.Duration(config.Timeout))
 	}
 }
