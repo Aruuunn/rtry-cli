@@ -21,5 +21,10 @@
 <a href="https://github.com/ArunMurugan78/rtry/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/ArunMurugan78/rtry?style=flat-square" alt="rtry pull-requests"/>
 </a>
-
 </p>
+
+## Installation
+
+```bash
+ go install github.com/arunmurugan78/rtry@latest
+```
