@@ -46,7 +46,7 @@ rtry -timeout 3000 "ping google.com"
 ### Options
 | flag         | Description | Default | Required    |
 | :---         |    :----:   | :----:  |  ---: |
-| timeout      | Timeout to retry executing the command in milliseconds  | 1000  | false   |
+| timeout      | Retry timeout in milliseconds  | 1000  | false   |
 
 ## License
 This project is licensed under the **MIT** License.
