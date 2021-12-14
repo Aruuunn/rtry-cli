@@ -1,7 +1,4 @@
-<p align="center">
-    <img src="./gopher.png" width="200px" height="auto">
-</p>
-<h1 align="center">Rtry</h1>
+<h1 align="center">Rtry ⚡</h1>
 
 <p align="center">(Re-)Try Executing a command till it succeeds.</p>
 
@@ -23,8 +20,14 @@
 </a>
 </p>
 
+>Note: Currently Only supports **Unix** Based systems.
+
 ## Installation
 
+
+Checkout the releases to download the binary for your distribution.
+
+Or install from source
 ```bash
  go install github.com/arunmurugan78/rtry@latest
 ```
