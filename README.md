@@ -1,6 +1,6 @@
 <h1 align="center">Rtry ⚡</h1>
 
-<p align="center">(Re-)Try Executing a command till it succeeds.</p>
+<p align="center">(Re-)Trys executing a command till it succeeds.</p>
 
 <p align="center">
 <a href="https://github.com/ArunMurugan78/rtry/blob/master/LICENSE" target="blank">
@@ -18,16 +18,35 @@
 <a href="https://github.com/ArunMurugan78/rtry/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/ArunMurugan78/rtry?style=flat-square" alt="rtry pull-requests"/>
 </a>
+<img src="https://github.com/ArunMurugan78/rtry/actions/workflows/releaser.yml/badge.svg" />
 </p>
 
 >Note: Currently Only supports **Unix** Based systems.
 
 ## Installation
 
+### Binary Download
+Checkout the [releases](https://github.com/ArunMurugan78/rtry/releases/latest) to download the binary for your distribution.
 
-Checkout the releases to download the binary for your distribution.
-
-Or install from source
+### Install from source
 ```bash
  go install github.com/arunmurugan78/rtry@latest
 ```
+
+## Usage
+```
+rtry [OPTIONS] COMMAND
+```
+
+### Example
+```bash
+rtry -timeout 3000 "ping google.com"
+```
+
+### Options
+| flag         | Description | Default | Required    |
+| :---         |    :----:   | :----:  |  ---: |
+| timeout      | Timeout to retry executing the command in milliseconds  | 1000  | false   |
+
+## License
+This project is licensed under the **MIT** License.
