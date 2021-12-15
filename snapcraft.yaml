@@ -1,0 +1,18 @@
+name: rtry
+version: git
+summary: (Re-)Try executing a command till it succeeds. 
+description: |
+  Rtry lets you execute a command again and again till it succeeds.
+confinement: strict
+base: core18
+parts:
+  rtry:
+    plugin: go
+    go-importpath: github.com/ArunMurugan78/rtry
+    source: .
+    source-type: git
+    build-packages:
+      - gcc
+apps:
+  rtry:
+    command: bin/rtry
