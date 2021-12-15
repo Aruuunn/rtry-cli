@@ -8,6 +8,10 @@ import (
 	"github.com/arunmurugan78/rtry/cmd"
 )
 
+const (
+	version = "1.0.0"
+)
+
 func main() {
 
 	flag.Usage = func() {
@@ -21,15 +25,27 @@ func main() {
 
 	commandLineArgs := flag.CommandLine.Args()
 
-	if len(commandLineArgs) != 1 {
-		fmt.Println("Error: COMMAND expected")
+	if len(commandLineArgs) == 0 {
+		fmt.Println("rtry ", version)
+		fmt.Println("Description: (Re-)Try executing a command till it succeeds. ")
+		fmt.Println("Author: Arun Murugan")
 		flag.Usage()
-		os.Exit(1)
+		os.Exit(0)
 	}
 
 	cmd.Run(cmd.Config{
 		Timeout:       *timeout,
-		CommandString: commandLineArgs[0],
+		CommandString: Join(commandLineArgs),
 	})
 
+}
+
+func Join(args []string) string {
+	r := ""
+
+	for _, arg := range args {
+		r = r + " " + arg
+	}
+
+	return r
 }
