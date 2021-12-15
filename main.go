@@ -9,13 +9,13 @@ import (
 )
 
 const (
-	version = "1.0.0"
+	version = "v1.0.0"
 )
 
 func main() {
 
 	flag.Usage = func() {
-		fmt.Println("Usage:\n\trtry [OPTIONS] COMMAND\nExample:\n\trtry \"echo Hello there!\"\nOptions:")
+		fmt.Println("Usage:\n\trtry [OPTIONS] COMMAND\nExample:\n\trtry \"ping google.com\"\nOptions:")
 		flag.PrintDefaults()
 	}
 
