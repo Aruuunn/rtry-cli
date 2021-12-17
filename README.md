@@ -1,4 +1,4 @@
-<h1 align="center">Rtry ⚡</h1>
+<h1 align="center">Rtry</h1>
 
 <p align="center">(Re-)Trys executing a command till it succeeds.</p>
 
