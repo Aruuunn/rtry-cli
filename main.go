@@ -20,7 +20,7 @@ func main() {
 	}
 
 	timeout := flag.Int("timeout", 1000, "timeout after to retry in milliseconds")
-
+	exitCode := flag.Int("code", 0, "expected exit code to stop")
 	flag.Parse()
 
 	commandLineArgs := flag.CommandLine.Args()
@@ -36,6 +36,7 @@ func main() {
 	cmd.Run(cmd.Config{
 		Timeout:       *timeout,
 		CommandString: Join(commandLineArgs),
+		ExitCode:      *exitCode,
 	})
 
 }

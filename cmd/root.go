@@ -32,7 +32,7 @@ func Run(config Config) {
 	for {
 		code := ExecuteCommand(config.CommandString)
 
-		if code == 0 {
+		if code == config.ExitCode {
 			break
 		}
 
