@@ -1,8 +1,9 @@
-<h1 align="center">Rtry ⚡</h1>
+<h1 align="center">Rtry</h1>
 
 <p align="center">(Re-)Trys executing a command till it succeeds.</p>
 
 <p align="center">
+ <a href="https://goreportcard.com/report/github.com/arunmurugan78/rtry"><img src="https://goreportcard.com/badge/github.com/arunmurugan78/rtry"/></a>
 <a href="https://github.com/ArunMurugan78/rtry/blob/master/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/ArunMurugan78/rtry?style=flat-square" alt="rtry licence" />
 </a>
