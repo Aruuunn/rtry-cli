@@ -31,17 +31,17 @@ Checkout the [releases](https://github.com/ArunMurugan78/rtry/releases/latest) t
 
 ### Install from source
 ```bash
- go install github.com/arunmurugan78/rtry@latest
+ go install github.com/ArunMurugan78/rtry-cli@latest
 ```
 
 ## Usage
 ```
-rtry [OPTIONS] COMMAND
+rtry-cli [OPTIONS] COMMAND
 ```
 
 ### Example
 ```bash
-rtry -timeout 3000 "ping google.com"
+rtry-cli -timeout 3000 "ping google.com"
 ```
 
 ### Options
