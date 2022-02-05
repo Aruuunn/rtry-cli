@@ -1,3 +1,3 @@
-module github.com/arunmurugan78/rtry
+module github.com/ArunMurugan78/rtry-cli
 
 go 1.17

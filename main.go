@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/arunmurugan78/rtry/cmd"
+	"github.com/ArunMurugan78/rtry-cli/cmd"
 )
 
 const (

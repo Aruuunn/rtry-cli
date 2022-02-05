@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/arunmurugan78/rtry/cmd"
+	"github.com/ArunMurugan78/rtry-cli/cmd"
 )
 
 // very simple test
