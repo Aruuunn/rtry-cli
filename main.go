@@ -1,52 +1,11 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-	"os"
-
 	"github.com/ArunMurugan78/rtry-cli/cmd"
 )
 
-const (
-	version = "v1.1.0"
-)
+var version string
 
 func main() {
-
-	flag.Usage = func() {
-		fmt.Println("Usage:\n\trtry [OPTIONS] COMMAND\nExample:\n\trtry \"ping google.com\"\nOptions:")
-		flag.PrintDefaults()
-	}
-
-	timeout := flag.Int("timeout", 1000, "timeout after to retry in milliseconds")
-	exitCode := flag.Int("code", 0, "expected exit code to stop")
-	flag.Parse()
-
-	commandLineArgs := flag.CommandLine.Args()
-
-	if len(commandLineArgs) == 0 {
-		fmt.Println("rtry ", version)
-		fmt.Println("Description: (Re-)Try executing a command till it succeeds. ")
-		fmt.Println("Author: Arun Murugan")
-		flag.Usage()
-		os.Exit(0)
-	}
-
-	cmd.Run(cmd.Config{
-		Timeout:       *timeout,
-		CommandString: Join(commandLineArgs),
-		ExitCode:      *exitCode,
-	})
-
-}
-
-func Join(args []string) string {
-	r := ""
-
-	for _, arg := range args {
-		r = r + " " + arg
-	}
-
-	return r
+	cmd.Execute(version)
 }
