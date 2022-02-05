@@ -44,18 +44,18 @@ func Run(config Config) {
 
 func Execute(version string) {
 	flag.Usage = func() {
-		fmt.Println("Usage:\n\trtry [OPTIONS] COMMAND\nExample:\n\trtry \"ping google.com\"\nOptions:")
+		fmt.Println("Usage:\n\trtry-cli [OPTIONS] COMMAND\nExample:\n\trtry-cli \"ping google.com\"\nOptions:")
 		flag.PrintDefaults()
 	}
 
 	timeout := flag.Int("timeout", 1000, "timeout after to retry in milliseconds")
-	exitCode := flag.Int("code", 0, "expected exit code to stop")
+	exitCode := flag.Int("code", 0, "expected exit code to stop (default 0)")
 	flag.Parse()
 
 	commandLineArgs := flag.CommandLine.Args()
 
 	if len(commandLineArgs) == 0 {
-		fmt.Println("rtry ", version)
+		fmt.Println("rtry-cli ", version)
 		fmt.Println("Description: (Re-)Try executing a command till it succeeds. ")
 		fmt.Println("Author: Arun Murugan")
 		flag.Usage()
